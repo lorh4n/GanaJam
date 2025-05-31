@@ -14,14 +14,3 @@ config/name="SnakeWithRapadura"
 run/main_scene="uid://d4m6c6gyid5nw"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[input]
-
-move_frente={
-"deadzone": 0.2,
-"events": []
-}
-move_tras={
-"deadzone": 0.2,
-"events": []
-}

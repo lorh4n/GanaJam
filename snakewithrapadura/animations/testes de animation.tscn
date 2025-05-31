@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhabi7gjeubx3"]
+
+[ext_resource type="PackedScene" uid="uid://yvc8r3kmw1tg" path="res://animations/god/god.tscn" id="1_rjbmx"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="God" parent="." instance=ExtResource("1_rjbmx")]
+position = Vector2(96, 37)
