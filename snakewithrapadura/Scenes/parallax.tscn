@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceiilvtlk2hlw"]
+[gd_scene load_steps=10 format=3 uid="uid://ceiilvtlk2hlw"]
 
 [ext_resource type="Texture2D" uid="uid://cdc33wekh56wo" path="res://assets/sky.png" id="1_ngbw4"]
 [ext_resource type="Texture2D" uid="uid://dtujar13idlga" path="res://assets/far-clouds.png" id="2_hd2e0"]
@@ -6,53 +6,80 @@
 [ext_resource type="Texture2D" uid="uid://dins5fw5kh2sb" path="res://assets/far-mountains.png" id="4_oukyj"]
 [ext_resource type="Texture2D" uid="uid://cha25fr61wj4t" path="res://assets/mountains.png" id="5_ka70p"]
 [ext_resource type="Texture2D" uid="uid://dh2eq2h7qjwdn" path="res://assets/trees.png" id="6_g2gbw"]
+[ext_resource type="Texture2D" uid="uid://dermm806ev8oe" path="res://assets/ArvorePenteada.jpeg" id="7_hd2e0"]
+[ext_resource type="Texture2D" uid="uid://bdlpapmnakis3" path="res://assets/CabeçaCuia.jpg" id="8_oukyj"]
+[ext_resource type="Texture2D" uid="uid://cn4q8vsu4hnf3" path="res://assets/Ponteestaiada.jpeg" id="9_ka70p"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Layer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer5"]
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3.621, 3.5)
 texture = ExtResource("1_ngbw4")
 centered = false
 
 [node name="Layer4" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1280, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer4"]
-position = Vector2(1, 33)
-scale = Vector2(2.48866, 1.29533)
+position = Vector2(-1, -87)
+scale = Vector2(10, 5.203)
 texture = ExtResource("2_hd2e0")
 centered = false
 
 [node name="Layer3" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer3"]
-position = Vector2(-8, 49)
-scale = Vector2(2.25767, 1.95918)
+position = Vector2(-425, -277)
+scale = Vector2(8, 6.941)
 texture = ExtResource("3_v1p2m")
 centered = false
 
 [node name="Layer2" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1120, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer2"]
+position = Vector2(-212, -396)
+scale = Vector2(7, 7)
 texture = ExtResource("4_oukyj")
 centered = false
 
 [node name="Layer1" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
+motion_mirroring = Vector2(560, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer1"]
+position = Vector2(-111, -11)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("5_ka70p")
 centered = false
 
 [node name="Layer0" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
+motion_scale = Vector2(1.2, 1)
+motion_mirroring = Vector2(720, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer0"]
+position = Vector2(-10, -9.00002)
+scale = Vector2(3, 3)
 texture = ExtResource("6_g2gbw")
 centered = false
+
+[node name="ArvorePenteada" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(1042, 387)
+texture = ExtResource("7_hd2e0")
+
+[node name="CabeçaCuia" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(863, 390)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_oukyj")
+
+[node name="Ponteestaiada" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(185, 416)
+texture = ExtResource("9_ka70p")
