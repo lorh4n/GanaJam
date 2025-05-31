@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq3etdnral8sb"]
+
+[ext_resource type="Texture2D" uid="uid://bmd0pagc1ye38" path="res://assets/Testes/Estrada1.png" id="1_xkowh"]
+
+[node name="BackgroundController" type="Node"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_mirroring = Vector2(1080, 0)
+
+[node name="Estrada1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 349.25)
+scale = Vector2(0.6, 0.553241)
+texture = ExtResource("1_xkowh")
