@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b4a2kummsd4x8"]
+
+[node name="GameController" type="Node"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
