@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4m6c6gyid5nw"]
+
+[ext_resource type="Script" uid="uid://chhipaahmo087" path="res://Scenes/JogarButton.gd" id="1_3k1ur"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qp0bb"]
+font_size = 50
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+anchor_left = 0.275
+anchor_top = 0.238
+anchor_right = 0.733
+anchor_bottom = 0.344
+offset_left = 8.19998
+offset_top = -0.223999
+offset_right = -0.416016
+offset_bottom = 0.0879974
+text = "SuSHII com Rapadura"
+label_settings = SubResource("LabelSettings_qp0bb")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.447
+anchor_top = 0.476
+anchor_right = 0.553
+anchor_bottom = 0.524
+offset_left = -32.944
+offset_top = 0.552002
+offset_right = -0.0560303
+offset_bottom = 0.447968
+grow_horizontal = 2
+grow_vertical = 2
+text = "JOGAR"
+script = ExtResource("1_3k1ur")
+
+[node name="Button" type="Button" parent="Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.29
+anchor_right = 1.0
+anchor_bottom = 2.274
+offset_top = 0.00999832
+offset_bottom = 0.505997
+grow_horizontal = 2
+grow_vertical = 2
+text = "DIFICULDADE"
+
+[node name="Button2" type="Button" parent="Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.29
+anchor_right = 1.0
+anchor_bottom = 2.274
+offset_top = 40.51
+offset_bottom = 41.006
+grow_horizontal = 2
+grow_vertical = 2
+text = "SAIR"
+
+[connection signal="pressed" from="Button" to="Button" method="startGame"]
