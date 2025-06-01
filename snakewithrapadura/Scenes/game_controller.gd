@@ -37,7 +37,7 @@ func revert_music():
 	$AudioStreamPlayer.stream=music
 	$AudioStreamPlayer.play()
 	inverted=false
-	$"../AnimationPlayer".stop()
+	$"../AnimationPlayer".play()
 
 func _on_audio_stream_player_finished() -> void:
 	if inverted:

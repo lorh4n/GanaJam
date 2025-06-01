@@ -319,8 +319,8 @@ grow_vertical = 2
 script = ExtResource("1_pyrfq")
 
 [node name="HistoryBg" type="Sprite2D" parent="."]
-position = Vector2(500.885, 291)
-scale = Vector2(0.309356, 0.253)
+position = Vector2(484, 270.5)
+scale = Vector2(0.320667, 0.2715)
 texture = ExtResource("2_oig27")
 
 [node name="HistoryPaper" type="Sprite2D" parent="."]
