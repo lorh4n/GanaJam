@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpm2flyenxwc7"]
+
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_ioy30"]
+[ext_resource type="Texture2D" uid="uid://syrbrlx2s06o" path="res://assets/Objects/Violão.png" id="2_8rwg1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ioy30"]
+size = Vector2(46, 59)
+
+[node name="Violao" type="CharacterBody2D" groups=["Objeto"]]
+script = ExtResource("1_ioy30")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_8rwg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 32.5)
+shape = SubResource("RectangleShape2D_ioy30")
