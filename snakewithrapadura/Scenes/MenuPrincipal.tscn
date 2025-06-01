@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://d4m6c6gyid5nw"]
 
 [ext_resource type="Script" uid="uid://chhipaahmo087" path="res://Scenes/JogarButton.gd" id="1_3k1ur"]
-[ext_resource type="Script" path="res://Scenes/menu_principal.gd" id="1_hbekh"]
+[ext_resource type="Script" uid="uid://dqkki2e70oa0l" path="res://Scenes/menu_principal.gd" id="1_hbekh"]
 [ext_resource type="FontFile" uid="uid://dfmt7r1gft536" path="res://assets/fonts/Daydream.ttf" id="1_wvohi"]
 [ext_resource type="FontFile" uid="uid://dx3fghii5hyix" path="res://assets/fonts/upheavtt.ttf" id="2_l10t8"]
 [ext_resource type="Texture2D" uid="uid://dxsg20ph5mkvt" path="res://assets/ui/CobraHistory.png" id="4_8kh3b"]
