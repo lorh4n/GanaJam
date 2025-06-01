@@ -1,49 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://csbx5pbdwm3vu"]
+[gd_scene load_steps=5 format=3 uid="uid://csbx5pbdwm3vu"]
 
-[ext_resource type="Script" uid="uid://ddu4tswvxe5fe" path="res://Scenes/player.gd" id="1_5x4x5"]
-[ext_resource type="Texture2D" uid="uid://cbu75ryxxij8c" path="res://assets/CobraAndando.png" id="1_fgljv"]
+[ext_resource type="PackedScene" uid="uid://c35ndtonhbi62" path="res://Scenes/player.tscn" id="1_24vhe"]
 [ext_resource type="PackedScene" uid="uid://c13pkhuehujy7" path="res://Scenes/background_controller.tscn" id="3_24vhe"]
 [ext_resource type="PackedScene" path="res://Scenes/game_controller.tscn" id="4_rqm4r"]
-[ext_resource type="PackedScene" uid="uid://ck4b6r8t4mu2q" path="res://Scenes/objeto.tscn" id="5_rqm4r"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5x4x5"]
-
-[sub_resource type="Animation" id="Animation_fgljv"]
-resource_name = "Andar_da_Cobra"
-length = 5.0
-loop_mode = 1
-
-[sub_resource type="Animation" id="Animation_sm7en"]
-length = 0.001
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5x4x5"]
-_data = {
-&"Andar_da_Cobra": SubResource("Animation_fgljv"),
-&"RESET": SubResource("Animation_sm7en")
-}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_24vhe"]
 size = Vector2(1196, 24.5)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" type="CharacterBody2D" parent="."]
-z_index = 10
+[node name="Player" parent="." instance=ExtResource("1_24vhe")]
 position = Vector2(585, 508.09)
-scale = Vector2(0.236523, 0.236523)
-script = ExtResource("1_5x4x5")
-
-[node name="Sprite" type="Sprite2D" parent="Player"]
-texture = ExtResource("1_fgljv")
-hframes = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_5x4x5")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
-libraries = {
-&"": SubResource("AnimationLibrary_5x4x5")
-}
 
 [node name="BackgroundController" parent="." node_paths=PackedStringArray("game_controller") instance=ExtResource("3_24vhe")]
 game_controller = NodePath("../GameController")
@@ -61,6 +28,3 @@ shape = SubResource("RectangleShape2D_24vhe")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDown"]
 position = Vector2(596, 635)
 shape = SubResource("RectangleShape2D_24vhe")
-
-[node name="Objeto" parent="." instance=ExtResource("5_rqm4r")]
-position = Vector2(867, 483)
