@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://p6p61jowusd5"]
+[gd_scene load_steps=15 format=3 uid="uid://d1r2kb0ev31eb"]
 
 [ext_resource type="Texture2D" uid="uid://dp6j5e0q5nlw3" path="res://animations/god/God_sem_camisa.png" id="1_jycft"]
 [ext_resource type="Script" path="res://Scenes/revive.gd" id="1_l8fhd"]
@@ -6,8 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dfmt7r1gft536" path="res://assets/fonts/Daydream.ttf" id="4_ikhad"]
 [ext_resource type="Texture2D" uid="uid://dnhdnbfwo0hbk" path="res://assets/ui/ButtonPress.png" id="6_gr2a8"]
 [ext_resource type="Texture2D" uid="uid://b70l346upde5p" path="res://assets/ui/ButtonNormal.png" id="7_abvio"]
-[ext_resource type="Script" uid="uid://c6e2nep46q7vj" path="res://Scenes/reset.gd" id="7_wu8dv"]
-[ext_resource type="AudioStream" uid="uid://8y5pgvlnhb6d" path="res://sound/MusicaPrincipal.mp3" id="8_175uh"]
+[ext_resource type="Script" path="res://Scenes/reset.gd" id="7_wu8dv"]
 
 [sub_resource type="Animation" id="Animation_biwfo"]
 resource_name = "GodRevive"
@@ -108,9 +107,6 @@ texture = ExtResource("7_abvio")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_l8fhd")
-
-[node name="MusicaPrincipal" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_175uh")
 
 [node name="GodSemCamisa" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
