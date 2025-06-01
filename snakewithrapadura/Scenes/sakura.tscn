@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg85l4xj8qmam"]
+
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_l68vs"]
+[ext_resource type="Texture2D" uid="uid://dq4hqf0kbbgoi" path="res://assets/Objects/Sakura.png" id="2_rpnpw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ob5iq"]
+size = Vector2(122, 126)
+
+[node name="Sakura" type="CharacterBody2D" groups=["Objeto"]]
+script = ExtResource("1_l68vs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_rpnpw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(51, 68)
+shape = SubResource("RectangleShape2D_ob5iq")

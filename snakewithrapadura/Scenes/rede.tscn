@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://drnnts4mgv828"]
+
+[ext_resource type="Texture2D" uid="uid://dko50eftlpk7l" path="res://assets/Objects/Rede.png" id="1_auodx"]
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_hmdr6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmdr6"]
+size = Vector2(146, 52.5)
+
+[node name="Rede" type="CharacterBody2D" groups=["Objeto"]]
+script = ExtResource("1_hmdr6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_auodx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 25.75)
+shape = SubResource("RectangleShape2D_hmdr6")

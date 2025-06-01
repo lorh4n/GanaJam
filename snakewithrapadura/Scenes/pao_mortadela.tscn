@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl5i15msltqp"]
+
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_lohk5"]
+[ext_resource type="Texture2D" uid="uid://blfep7aus7tev" path="res://assets/Objects/PãoComMortadela.png" id="2_q1yjo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ru7xg"]
+size = Vector2(124, 35)
+
+[node name="PaoMortadela" type="CharacterBody2D" groups=["Objeto"]]
+script = ExtResource("1_lohk5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("2_q1yjo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 7.5)
+shape = SubResource("RectangleShape2D_ru7xg")
