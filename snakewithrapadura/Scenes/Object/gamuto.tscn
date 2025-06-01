@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkdauwl6wfiik"]
+
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/Object/objeto.gd" id="1_yoxf6"]
+[ext_resource type="Texture2D" uid="uid://bosbvq8nt8afb" path="res://assets/Objects/Gamuto.png" id="2_udt0s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwb4c"]
+size = Vector2(182, 96)
+
+[node name="Sakura" type="CharacterBody2D" groups=["Objeto"]]
+script = ExtResource("1_yoxf6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_udt0s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 49)
+shape = SubResource("RectangleShape2D_qwb4c")
