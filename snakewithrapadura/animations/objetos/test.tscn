@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8ph4yvbdhph0"]
+
+[ext_resource type="Texture2D" uid="uid://d26kx87k3c33w" path="res://assets/Objects/Bateria.png" id="1_7sb34"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(141, 94)
+texture = ExtResource("1_7sb34")
