@@ -1,6 +1,6 @@
 extends Button
 
 func startGame ():
-#	colocar o roll back aqui
-#	sumir com o botão e deus
+	colocar o roll back aqui
+	
 	pass

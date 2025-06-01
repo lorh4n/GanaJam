@@ -41,5 +41,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Objeto"):
 		$".".set_visible(false)
 		var cena = revive.instantiate()
+		
+		cena.game_controller=$"../GameController"
 		get_parent().add_child(cena)
 		
