@@ -6,3 +6,6 @@ func get_music_time():
 func get_music_length():
 	return $AudioStreamPlayer.stream.get_length()
 	
+func pause_music():
+	$AudioStreamPlayer.stop()
+	

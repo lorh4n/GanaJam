@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -400.0
 const MIN_LIMIT=Vector2(0,370)
 const MAX_LIMIT=Vector2(960,515)
 var disabled=false
+@onready var revive=preload("res://Scenes/Revive.tscn")
 func _ready():
 	$AnimationPlayer.play("Andar_da_Cobra")
 
@@ -38,5 +39,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Objeto"):
-		queue_free()
+		$".".set_visible(false)
+		var cena = revive.instantiate()
+		get_parent().add_child(cena)
 		

@@ -5,3 +5,4 @@ func _ready():
 
 func GodRevive(): 
 	$AnimationPlayer.play("GodRevive")
+	$AudioStreamPlayer2D.play()

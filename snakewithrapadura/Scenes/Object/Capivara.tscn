@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_giu01"]
 size = Vector2(147, 82)
 
-[node name="Capivara" type="CharacterBody2D" groups=["Objeto"]]
+[node name="Capivara" type="StaticBody2D" groups=["Objeto"]]
 script = ExtResource("1_17q3o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

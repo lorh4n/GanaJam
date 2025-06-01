@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2omk"]
 size = Vector2(47, 32)
 
-[node name="Shibainu" type="CharacterBody2D" groups=["Objeto"]]
+[node name="Shibainu" type="StaticBody2D" groups=["Objeto"]]
 script = ExtResource("1_ncxn1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

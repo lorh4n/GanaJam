@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16mty"]
 size = Vector2(67, 50)
 
-[node name="Guitarra" type="CharacterBody2D" groups=["Objeto"]]
+[node name="Guitarra" type="StaticBody2D" groups=["Objeto"]]
 script = ExtResource("1_er1na")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
