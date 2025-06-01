@@ -1,41 +1,31 @@
 extends Node
 
-enum ObjectType {
-	tipo1,
-}
-
-const NODE_A = preload("res://animations/objetos/test.tscn")
+const BATERA = preload("res://Scenes/batera.tscn")
+const CAPIVARA = preload("res://Scenes/Capivara.tscn")
 
 var positions = [
-	Vector2(0, 0),
-	Vector2(100, 200),
-	Vector2(300, 400)
+	Vector2(1152, 500),
+	Vector2(1152, 300),
+	Vector2(1152, 200)
 ]
 
-func spawnar(object_type_str: String, skip_position: int) -> void:
+var scenes = {
+	"batera": BATERA,
+	"capivara": CAPIVARA
+}
+
+func spawnar(object_name: String, skip_position: int) -> void:
+	print("hello")
 	if skip_position < 1 or skip_position > 3:
 		return
-
-	# Converte a string para o valor do enum
-	var object_type: ObjectType
-	match object_type_str.to_upper():
-		"TIPO1":
-			object_type = ObjectType.tipo1
-		_:
-			print("Tipo inválido: ", object_type_str)
-			return
-
-	# Seleciona a cena com base no tipo
-	var node_scene
-	match object_type:
-		ObjectType.tipo1:
-			node_scene = NODE_A
-		_:
-			return
-
-	# Instancia os nós nas posições
-	for i in [0, 1, 2]:
+	
+	var scene = scenes.get(object_name.to_lower())
+	if not scene:
+		return
+	
+	for i in range(3):
 		if i + 1 != skip_position:
-			var new_node = node_scene.instantiate()
+			var new_node = scene.instantiate()
 			new_node.position = positions[i]
+			print("filho")
 			add_child(new_node)
