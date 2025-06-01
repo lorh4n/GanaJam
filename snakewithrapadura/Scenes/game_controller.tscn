@@ -1,7 +1,15 @@
-[gd_scene load_steps=0 format=3 uid="uid://b4a2kummsd4x8"]
+
+[gd_scene load_steps=3 format=3 uid="uid://b4a2kummsd4x8"]
+
+[ext_resource type="Script" uid="uid://dbxv6necgs8xv" path="res://Scenes/game_controller.gd" id="1_nqxm2"]
+[ext_resource type="AudioStream" uid="uid://8y5pgvlnhb6d" path="res://sound/MusicaPrincipal.mp3" id="2_kx2cw"]
+
 
 [node name="GameController" type="Node"]
+script = ExtResource("1_nqxm2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kx2cw")
+autoplay = true
