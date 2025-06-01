@@ -1,11 +1,92 @@
-[gd_scene load_steps=3 format=3 uid="uid://di2ovnknppthq"]
+[gd_scene load_steps=13 format=3 uid="uid://csbx5pbdwm3vu"]
 
-[ext_resource type="PackedScene" uid="uid://c35ndtonhbi62" path="res://Scenes/player.tscn" id="1_sm7en"]
+[ext_resource type="PackedScene" uid="uid://c35ndtonhbi62" path="res://Scenes/Player/player.tscn" id="1_sm7en"]
 [ext_resource type="PackedScene" uid="uid://b4a2kummsd4x8" path="res://Scenes/game_controller.tscn" id="2_sm7en"]
+[ext_resource type="PackedScene" uid="uid://dq3etdnral8sb" path="res://Scenes/background_controller.tscn" id="3_5x4x5"]
+
+[sub_resource type="Shader" id="Shader_5x4x5"]
+code = "shader_type canvas_item;
+
+uniform sampler2D noise : source_color, repeat_enable, filter_nearest;
+uniform float alpha : hint_range(0.0, 1.0) = 1.;
+uniform sampler2D falloff;
+uniform sampler2D lineFalloff;
+uniform float speed = 10.;
+
+vec2 polar(vec2 uv, vec2 center, float zoom, float repeat)
+{
+	vec2 dir = uv - center;
+	float radius = length(dir) * 2.0;
+	float angle = atan(dir.y, dir.x) * 1.0/(3.1416 * 2.0);
+	return mod(vec2(radius * zoom, angle * repeat), 1.0);
+}
+
+void fragment() {
+	vec2 polar = polar(UV, vec2(.5), 1., 1.);
+	float mask = distance(vec2(.5), UV);
+	
+	float polarStep = polar.y + TIME * speed;
+	polarStep -= fract(polarStep * 1000.) / 1000.;
+	vec2 polarLineUV = vec2(polarStep);
+	float lines = texture(noise, polarLineUV).r;
+	
+	float n = texture(lineFalloff, vec2(lines, 0.)).r;
+	
+	COLOR.a = n * texture(falloff, vec2(mask, 0.)).r;
+	
+	COLOR.a *= alpha;
+}
+"
+
+[sub_resource type="Curve" id="Curve_24vhe"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.540541, 0.775281), 0.0, 0.0, 0, 0, Vector2(0.851351, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_5x4x5"]
+curve = SubResource("Curve_24vhe")
+
+[sub_resource type="Curve" id="Curve_5x4x5"]
+_data = [Vector2(0.148649, 0.88764), 2.04667, 0.0, 0, 0, Vector2(0.47973, 0.438202), 0.0, 0.0, 0, 0, Vector2(0.993243, 0.0449438), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_24vhe"]
+curve = SubResource("Curve_5x4x5")
+
+[sub_resource type="Gradient" id="Gradient_rqm4r"]
+offsets = PackedFloat32Array(0.0409836, 0.590164, 0.852459, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jujb6"]
+seed = -1468194373
+frequency = 0.0136
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ybk2h"]
+color_ramp = SubResource("Gradient_rqm4r")
+noise = SubResource("FastNoiseLite_jujb6")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_24vhe"]
+shader = SubResource("Shader_5x4x5")
+shader_parameter/noise = SubResource("NoiseTexture2D_ybk2h")
+shader_parameter/alpha = 1.0
+shader_parameter/falloff = SubResource("CurveTexture_5x4x5")
+shader_parameter/lineFalloff = SubResource("CurveTexture_24vhe")
+shader_parameter/speed = 0.6
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_sm7en")]
-position = Vector2(78, 49)
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_24vhe")
+offset_right = 961.0
+offset_bottom = 538.0
+stretch = true
 
-[node name="GameController" parent="." instance=ExtResource("2_sm7en")]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+size = Vector2i(961, 538)
+
+[node name="Player" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_sm7en")]
+position = Vector2(109, 458)
+
+[node name="GameController" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_sm7en")]
+
+[node name="BackgroundController" parent="SubViewportContainer/SubViewport" node_paths=PackedStringArray("game_controller") instance=ExtResource("3_5x4x5")]
+game_controller = NodePath("../GameController")

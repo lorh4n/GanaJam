@@ -1,6 +1,4 @@
-
 [gd_scene load_steps=7 format=3 uid="uid://dq3etdnral8sb"]
-
 
 [ext_resource type="Texture2D" uid="uid://bmd0pagc1ye38" path="res://assets/Testes/Estrada1.png" id="1_xkowh"]
 [ext_resource type="Script" uid="uid://bglsv424hwpwh" path="res://Scenes/background_controller.gd" id="1_xxqhh"]
@@ -18,11 +16,9 @@ script = ExtResource("1_xxqhh")
 texture_filter = 1
 motion_mirroring = Vector2(960, 0)
 
-
 [node name="Estrada1" type="Sprite2D" parent="ParallaxBackground/RoadLayer"]
 position = Vector2(482, 294)
 scale = Vector2(0.500521, 0.451389)
-
 texture = ExtResource("1_xkowh")
 
 [node name="InnerBackground" type="ParallaxLayer" parent="ParallaxBackground"]
