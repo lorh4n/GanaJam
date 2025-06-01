@@ -1,14 +1,20 @@
-[gd_scene load_steps=16 format=3 uid="uid://l2ihdh6n2hkr"]
+[gd_scene load_steps=24 format=3 uid="uid://l2ihdh6n2hkr"]
 
-[ext_resource type="Script" path="res://Scenes/history.gd" id="1_pyrfq"]
+[ext_resource type="Script" uid="uid://dw3g1n7t674hb" path="res://Scenes/history.gd" id="1_pyrfq"]
 [ext_resource type="Texture2D" uid="uid://cjdl6os2mvdbv" path="res://assets/Testes/HistoryBg.jpg" id="2_oig27"]
 [ext_resource type="Texture2D" uid="uid://c5dco72eoiesb" path="res://assets/Testes/HistoryPaper.png" id="3_0uxmr"]
 [ext_resource type="FontFile" uid="uid://dfmt7r1gft536" path="res://assets/fonts/Daydream.ttf" id="4_0uxmr"]
+[ext_resource type="Texture2D" uid="uid://dd4wwbujchgy0" path="res://assets/ui/Banderola.png" id="4_4ipw6"]
 [ext_resource type="Texture2D" uid="uid://b70l346upde5p" path="res://assets/ui/ButtonNormal.png" id="5_d85y4"]
+[ext_resource type="Texture2D" uid="uid://dxsg20ph5mkvt" path="res://assets/ui/CobraHistory.png" id="5_enxr6"]
 [ext_resource type="Texture2D" uid="uid://dnhdnbfwo0hbk" path="res://assets/ui/ButtonPress.png" id="5_i534w"]
+[ext_resource type="Script" uid="uid://bxsk75w34two4" path="res://Scripts/UIProximoButton.gd" id="9_gnqan"]
+[ext_resource type="Texture2D" uid="uid://cfd3xwosd5pht" path="res://assets/ui/ThinkSushi.png" id="10_enxr6"]
+[ext_resource type="Texture2D" uid="uid://d4e54dedvl4l6" path="res://assets/ui/MaspThink.png" id="11_gnqan"]
 
 [sub_resource type="Animation" id="Animation_d85y4"]
 resource_name = "History"
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -20,6 +26,66 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Banderola:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.713333, 1.16667, 1.53333),
+"transitions": PackedFloat32Array(0.366022, 0.366022, 0.366022),
+"update": 0,
+"values": [Vector2(589, -148), Vector2(592, 255), Vector2(585, 211)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CobraHistory:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.91, 1.63333),
+"transitions": PackedFloat32Array(1, 1.36604),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ButtonProximo:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.79),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ButtonProximo:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.79),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MaspThink:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_pyrfq"]
@@ -36,11 +102,192 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Banderola:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(589, -148)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CobraHistory:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ThinkSushi:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ButtonProximo:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ButtonProximo:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MaspThink:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ThinkSushi:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MaspThink:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_gnqan"]
+resource_name = "HistorySlide2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ThinkSushi:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ThinkSushi:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_uyvxs"]
+resource_name = "Slide3"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MaspThink:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ThinkSushi:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ThinkSushi:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MaspThink:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.04),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ogxjo"]
+resource_name = "Map"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i534w"]
 _data = {
 &"History": SubResource("Animation_d85y4"),
-&"RESET": SubResource("Animation_pyrfq")
+&"HistorySlide2": SubResource("Animation_gnqan"),
+&"Map": SubResource("Animation_ogxjo"),
+&"RESET": SubResource("Animation_pyrfq"),
+&"Slide3": SubResource("Animation_uyvxs")
 }
 
 [sub_resource type="FontVariation" id="FontVariation_i534w"]
@@ -85,7 +332,19 @@ libraries = {
 &"": SubResource("AnimationLibrary_i534w")
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="Banderola" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(589, -148)
+scale = Vector2(1.56977, 1.56977)
+texture = ExtResource("4_4ipw6")
+
+[node name="CobraHistory" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(962, 458)
+scale = Vector2(1.14535, 1.14535)
+texture = ExtResource("5_enxr6")
+
+[node name="ButtonProximo" type="Button" parent="."]
 layout_mode = 0
 offset_left = 883.0
 offset_top = 531.0
@@ -97,5 +356,21 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_i534w")
 theme_override_styles/hover = SubResource("StyleBoxTexture_enxr6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4ipw6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_1ofyi")
+disabled = true
 text = "PROXIMO
 "
+script = ExtResource("9_gnqan")
+
+[node name="ThinkSushi" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(730, 378)
+scale = Vector2(1.14968, 1.14968)
+texture = ExtResource("10_enxr6")
+
+[node name="MaspThink" type="Sprite2D" parent="."]
+position = Vector2(666, 330)
+scale = Vector2(1.57474, 1.66667)
+texture = ExtResource("11_gnqan")
+
+[connection signal="pressed" from="ButtonProximo" to="ButtonProximo" method="nextSlide"]
