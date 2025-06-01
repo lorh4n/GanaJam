@@ -1,24 +1,26 @@
-[gd_scene load_steps=15 format=3 uid="uid://d1r2kb0ev31eb"]
+[gd_scene load_steps=17 format=3 uid="uid://d1r2kb0ev31eb"]
 
 [ext_resource type="Texture2D" uid="uid://dp6j5e0q5nlw3" path="res://animations/god/God_sem_camisa.png" id="1_jycft"]
-[ext_resource type="Script" path="res://Scenes/revive.gd" id="1_l8fhd"]
+[ext_resource type="Script" uid="uid://ncuy73wo1tpt" path="res://Scenes/revive.gd" id="1_l8fhd"]
 [ext_resource type="Texture2D" uid="uid://cbu75ryxxij8c" path="res://assets/CobraAndando.png" id="2_l8fhd"]
+[ext_resource type="Texture2D" uid="uid://ixtdmmvgy5rd" path="res://animations/god/camisa_of_god.png" id="3_gr2a8"]
 [ext_resource type="FontFile" uid="uid://dfmt7r1gft536" path="res://assets/fonts/Daydream.ttf" id="4_ikhad"]
 [ext_resource type="Texture2D" uid="uid://dnhdnbfwo0hbk" path="res://assets/ui/ButtonPress.png" id="6_gr2a8"]
 [ext_resource type="Texture2D" uid="uid://b70l346upde5p" path="res://assets/ui/ButtonNormal.png" id="7_abvio"]
-[ext_resource type="Script" path="res://Scenes/reset.gd" id="7_wu8dv"]
+[ext_resource type="Script" uid="uid://c6e2nep46q7vj" path="res://Scenes/reset.gd" id="7_wu8dv"]
+[ext_resource type="AudioStream" uid="uid://dkn2otmlrkijp" path="res://sound/RefraoInicio.mp3" id="8_175uh"]
 
 [sub_resource type="Animation" id="Animation_biwfo"]
 resource_name = "GodRevive"
-length = 8.0
+length = 18.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Button:visible")
+tracks/0/path = NodePath("ButtonReset:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 7.43333),
+"times": PackedFloat32Array(0, 8.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -30,7 +32,7 @@ tracks/1/path = NodePath("CobraAndando:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3.3861, 7.1),
+"times": PackedFloat32Array(0, 4.1, 7.96667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -42,10 +44,22 @@ tracks/2/path = NodePath("GodSemCamisa:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.37438),
+"times": PackedFloat32Array(0.566667, 6.23333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CamisaOfGod:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(5.49664, 14.8667, 17.9333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_s6a36"]
@@ -53,7 +67,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Button:visible")
+tracks/0/path = NodePath("ButtonReset:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -86,6 +100,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CamisaOfGod:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikhad"]
 _data = {
@@ -105,16 +131,21 @@ texture = ExtResource("6_gr2a8")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grvnh"]
 texture = ExtResource("7_abvio")
 
-[node name="Node2D" type="Node2D"]
+[node name="Revive" type="Node2D"]
 script = ExtResource("1_l8fhd")
 
 [node name="GodSemCamisa" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(550.75, 417.5)
+position = Vector2(482.75, 311.5)
 texture = ExtResource("1_jycft")
 
+[node name="CamisaOfGod" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(484, 305)
+texture = ExtResource("3_gr2a8")
+
 [node name="CobraAndando" type="Sprite2D" parent="."]
-position = Vector2(244.75, 329.5)
+position = Vector2(176.75, 223.5)
 scale = Vector2(0.157503, 0.133423)
 texture = ExtResource("2_l8fhd")
 hframes = 2
@@ -124,14 +155,17 @@ libraries = {
 &"": SubResource("AnimationLibrary_ikhad")
 }
 
-[node name="Button" type="Button" parent="."]
-offset_left = 733.0
-offset_top = 293.0
-offset_right = 940.0
-offset_bottom = 371.0
+[node name="ButtonReset" type="Button" parent="."]
+offset_left = 665.0
+offset_top = 187.0
+offset_right = 872.0
+offset_bottom = 265.0
 theme_override_fonts/font = SubResource("FontVariation_wu8dv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_46xdp")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_osajf")
 theme_override_styles/normal = SubResource("StyleBoxTexture_grvnh")
 text = "Reviver"
 script = ExtResource("7_wu8dv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_175uh")

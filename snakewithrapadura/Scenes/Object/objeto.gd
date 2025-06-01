@@ -1,10 +1,8 @@
-extends CharacterBody2D
+extends StaticBody2D
 
 
-const SPEED = 10000.0
-var direction = -1
+const SPEED = 100.0
+var direction = 1
 
 func _physics_process(delta: float) -> void:
-	velocity.x = direction * SPEED
-
-	move_and_slide()
+	position.x -= direction * SPEED * delta

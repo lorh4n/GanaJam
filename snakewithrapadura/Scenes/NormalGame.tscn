@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://csbx5pbdwm3vu"]
+[gd_scene load_steps=14 format=3 uid="uid://csbx5pbdwm3vu"]
 
 [ext_resource type="PackedScene" uid="uid://c35ndtonhbi62" path="res://Scenes/Player/player.tscn" id="1_sm7en"]
 [ext_resource type="PackedScene" uid="uid://b4a2kummsd4x8" path="res://Scenes/game_controller.tscn" id="2_sm7en"]
 [ext_resource type="PackedScene" uid="uid://dq3etdnral8sb" path="res://Scenes/background_controller.tscn" id="3_5x4x5"]
+[ext_resource type="PackedScene" uid="uid://bfyy48eyd074m" path="res://Scenes/Object/batera.tscn" id="5_rqm4r"]
 
 [sub_resource type="Shader" id="Shader_5x4x5"]
 code = "shader_type canvas_item;
@@ -81,12 +82,17 @@ offset_bottom = 538.0
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
 size = Vector2i(961, 538)
+render_target_update_mode = 4
 
 [node name="Player" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_sm7en")]
 position = Vector2(109, 458)
 
 [node name="GameController" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_sm7en")]
+
+[node name="Batera" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_rqm4r")]
+position = Vector2(717, 432)
 
 [node name="BackgroundController" parent="SubViewportContainer/SubViewport" node_paths=PackedStringArray("game_controller") instance=ExtResource("3_5x4x5")]
 game_controller = NodePath("../GameController")

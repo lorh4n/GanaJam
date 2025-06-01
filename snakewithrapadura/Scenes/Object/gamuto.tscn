@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qwb4c"]
 size = Vector2(182, 96)
 
-[node name="Sakura" type="CharacterBody2D" groups=["Objeto"]]
+[node name="Gamuto" type="StaticBody2D" groups=["Objeto"]]
 script = ExtResource("1_yoxf6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
