@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://byp7qyvjvwmpr"]
+
+[ext_resource type="Script" uid="uid://d1gggoo1bdl4p" path="res://Scripts/buttonFinal.gd" id="1_6dr5p"]
+[ext_resource type="Texture2D" uid="uid://cwiofr73n654e" path="res://assets/country-platform-back.png" id="1_rr23m"]
+[ext_resource type="FontFile" uid="uid://dx3fghii5hyix" path="res://assets/fonts/upheavtt.ttf" id="2_3vlhx"]
+[ext_resource type="Texture2D" uid="uid://dxsg20ph5mkvt" path="res://assets/ui/CobraHistory.png" id="4_ldrtj"]
+[ext_resource type="Texture2D" uid="uid://2ouq4d4ngm0k" path="res://assets/SushiComRapadura.png" id="5_xhiku"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gbdfp"]
+font = ExtResource("2_3vlhx")
+font_size = 30
+font_color = Color(0.839216, 0, 0.0823529, 1)
+
+[node name="Ganhou" type="Node2D"]
+
+[node name="Country-platform-back" type="Sprite2D" parent="."]
+position = Vector2(480.5, 268.5)
+scale = Vector2(2.48698, 2.40625)
+texture = ExtResource("1_rr23m")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 142.0
+offset_top = 220.0
+offset_right = 801.0
+offset_bottom = 248.0
+text = "VOCE ENCONTROU O SEU SUSHI COM RAPADURA"
+label_settings = SubResource("LabelSettings_gbdfp")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 409.0
+offset_top = 315.0
+offset_right = 577.0
+offset_bottom = 377.0
+text = "Fechar"
+script = ExtResource("1_6dr5p")
+
+[node name="CobraHistory" type="Sprite2D" parent="."]
+position = Vector2(789, 382)
+scale = Vector2(1.66279, 1.5565)
+texture = ExtResource("4_ldrtj")
+
+[node name="SushiComRapadura" type="Sprite2D" parent="."]
+position = Vector2(225, 418)
+texture = ExtResource("5_xhiku")

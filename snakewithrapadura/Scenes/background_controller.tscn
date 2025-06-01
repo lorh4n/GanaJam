@@ -1,37 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://dq3etdnral8sb"]
+[gd_scene load_steps=14 format=3 uid="uid://dq3etdnral8sb"]
 
 [ext_resource type="Texture2D" uid="uid://bmd0pagc1ye38" path="res://assets/Testes/Estrada1.png" id="1_xkowh"]
 [ext_resource type="Script" uid="uid://bglsv424hwpwh" path="res://Scenes/background_controller.gd" id="1_xxqhh"]
-[ext_resource type="Texture2D" uid="uid://dermm806ev8oe" path="res://assets/ArvorePenteada.jpeg" id="3_k5v6k"]
+[ext_resource type="Texture2D" uid="uid://c7kykrlm2qdo6" path="res://assets/BgSemFundo/SerraCapivara_semfundo.png" id="3_recik"]
 [ext_resource type="Texture2D" uid="uid://xajyv4ekxgl0" path="res://assets/SerraCpivara.jpeg" id="4_48mhk"]
-[ext_resource type="Texture2D" uid="uid://cn4q8vsu4hnf3" path="res://assets/Ponteestaiada.jpeg" id="5_5fmn7"]
-[ext_resource type="Texture2D" uid="uid://bdlpapmnakis3" path="res://assets/CabeçaCuia.jpg" id="6_4p6tq"]
+[ext_resource type="Texture2D" uid="uid://bdrantpjwbmrt" path="res://assets/BgSemFundo/ParqueCidadania_semfundo.png" id="4_j1047"]
+[ext_resource type="Texture2D" uid="uid://bd8vbqjd3g04i" path="res://assets/BgSemFundo/CabeçaCuia_semfundo.png" id="5_q7r2j"]
+[ext_resource type="Texture2D" uid="uid://db44fjekgk8be" path="res://assets/BgSemFundo/MuseuSp.png" id="7_didfx"]
+[ext_resource type="Texture2D" uid="uid://cj1k3kise4oh1" path="res://assets/BgSemFundo/Mercadao.png" id="8_3sxx6"]
+[ext_resource type="Texture2D" uid="uid://cxmlxnxnvvshl" path="res://assets/BgSemFundo/Masp_fundo.png" id="9_h1e1k"]
+[ext_resource type="Texture2D" uid="uid://8s3tce7y5omy" path="res://assets/BgSemFundo/Fuji_semfundo.png" id="10_o23yo"]
+[ext_resource type="Texture2D" uid="uid://cio21c5nxa0yb" path="res://assets/BgSemFundo/TempoSemFundo.png" id="11_bnurt"]
+[ext_resource type="Texture2D" uid="uid://ovqja6tlfawn" path="res://assets/BgSemFundo/New Project.png" id="12_43btb"]
+[ext_resource type="Texture2D" uid="uid://cwiofr73n654e" path="res://assets/country-platform-back.png" id="13_l5cxt"]
 
 [node name="BackgroundController" type="Node"]
 script = ExtResource("1_xxqhh")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="RoadLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-motion_mirroring = Vector2(960, 0)
-
-[node name="Estrada1" type="Sprite2D" parent="ParallaxBackground/RoadLayer"]
-position = Vector2(482, 294)
-scale = Vector2(0.500521, 0.451389)
-texture = ExtResource("1_xkowh")
-
 [node name="InnerBackground" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Teresina1" type="Sprite2D" parent="ParallaxBackground/InnerBackground"]
-texture = ExtResource("3_k5v6k")
+texture = ExtResource("3_recik")
 offset = Vector2(2880, 270)
 
 [node name="Teresina2" type="Sprite2D" parent="ParallaxBackground/InnerBackground"]
-texture = ExtResource("3_k5v6k")
+texture = ExtResource("4_j1047")
 
 [node name="Teresina3" type="Sprite2D" parent="ParallaxBackground/InnerBackground"]
-texture = ExtResource("3_k5v6k")
+texture = ExtResource("5_q7r2j")
 
 [node name="Bahia" type="Sprite2D" parent="ParallaxBackground/InnerBackground"]
 texture = ExtResource("4_48mhk")
@@ -43,19 +41,37 @@ texture = ExtResource("4_48mhk")
 texture = ExtResource("4_48mhk")
 
 [node name="São Paulo" type="Sprite2D" parent="ParallaxBackground/InnerBackground"]
-texture = ExtResource("5_5fmn7")
+texture = ExtResource("7_didfx")
 
 [node name="São Paulo2" type="Sprite2D" parent="ParallaxBackground/InnerBackground"]
-texture = ExtResource("5_5fmn7")
+texture = ExtResource("8_3sxx6")
 
 [node name="São Paulo3" type="Sprite2D" parent="ParallaxBackground/InnerBackground"]
-texture = ExtResource("5_5fmn7")
+texture = ExtResource("9_h1e1k")
 
 [node name="Japão" type="Sprite2D" parent="ParallaxBackground/InnerBackground"]
-texture = ExtResource("6_4p6tq")
+texture = ExtResource("10_o23yo")
 
 [node name="Japão2" type="Sprite2D" parent="ParallaxBackground/InnerBackground"]
-texture = ExtResource("6_4p6tq")
+texture = ExtResource("11_bnurt")
 
 [node name="Japão3" type="Sprite2D" parent="ParallaxBackground/InnerBackground"]
-texture = ExtResource("6_4p6tq")
+texture = ExtResource("12_43btb")
+
+[node name="RoadLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_mirroring = Vector2(960, 0)
+
+[node name="Estrada1" type="Sprite2D" parent="ParallaxBackground/RoadLayer"]
+position = Vector2(480, 294)
+scale = Vector2(0.500521, 0.451389)
+texture = ExtResource("1_xkowh")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+z_as_relative = false
+position = Vector2(483.5, 268)
+scale = Vector2(2.51302, 2.39286)
+texture = ExtResource("13_l5cxt")

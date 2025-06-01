@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://l2ihdh6n2hkr"]
+[gd_scene load_steps=25 format=3 uid="uid://c0wpr7iquhjq6"]
 
 [ext_resource type="Script" uid="uid://dw3g1n7t674hb" path="res://Scenes/history.gd" id="1_pyrfq"]
 [ext_resource type="Texture2D" uid="uid://cjdl6os2mvdbv" path="res://assets/Testes/HistoryBg.jpg" id="2_oig27"]
@@ -8,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://b70l346upde5p" path="res://assets/ui/ButtonNormal.png" id="5_d85y4"]
 [ext_resource type="Texture2D" uid="uid://dxsg20ph5mkvt" path="res://assets/ui/CobraHistory.png" id="5_enxr6"]
 [ext_resource type="Texture2D" uid="uid://dnhdnbfwo0hbk" path="res://assets/ui/ButtonPress.png" id="5_i534w"]
-[ext_resource type="Script" uid="uid://bxsk75w34two4" path="res://Scripts/UIProximoButton.gd" id="9_gnqan"]
+[ext_resource type="Script" path="res://Scripts/UIProximoButton.gd" id="9_gnqan"]
 [ext_resource type="Texture2D" uid="uid://cfd3xwosd5pht" path="res://assets/ui/ThinkSushi.png" id="10_enxr6"]
 [ext_resource type="Texture2D" uid="uid://d4e54dedvl4l6" path="res://assets/ui/MaspThink.png" id="11_gnqan"]
+[ext_resource type="AudioStream" uid="uid://dkn2otmlrkijp" path="res://sound/RefraoInicio.mp3" id="12_uyvxs"]
 
 [sub_resource type="Animation" id="Animation_d85y4"]
 resource_name = "History"
@@ -372,5 +373,10 @@ texture = ExtResource("10_enxr6")
 position = Vector2(510, 291)
 scale = Vector2(1.57474, 1.66667)
 texture = ExtResource("11_gnqan")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_uyvxs")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="ButtonProximo" to="ButtonProximo" method="nextSlide"]

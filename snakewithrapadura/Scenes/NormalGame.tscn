@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://di2ovnknppthq"]
+[gd_scene load_steps=16 format=3 uid="uid://csbx5pbdwm3vu"]
 
 [ext_resource type="PackedScene" uid="uid://c35ndtonhbi62" path="res://Scenes/Player/player.tscn" id="1_sm7en"]
 [ext_resource type="PackedScene" uid="uid://b4a2kummsd4x8" path="res://Scenes/game_controller.tscn" id="2_sm7en"]
@@ -94,28 +94,28 @@ tracks/0/keys = {
 "args": ["gamuto", 2],
 "method": &"spawnar"
 }, {
-"args": ["gamuto", 2],
+"args": ["gamuto", 1],
 "method": &"spawnar"
 }, {
-"args": ["capivara", 2],
+"args": ["capivara", 3],
 "method": &"spawnar"
 }, {
 "args": ["mistura", 2],
 "method": &"spawnar"
 }, {
-"args": ["brasil", 2],
+"args": ["brasil", 1],
+"method": &"spawnar"
+}, {
+"args": ["capivara", 2],
+"method": &"spawnar"
+}, {
+"args": ["mistura", 3],
 "method": &"spawnar"
 }, {
 "args": ["brasil", 2],
 "method": &"spawnar"
 }, {
-"args": ["brasil", 2],
-"method": &"spawnar"
-}, {
-"args": ["brasil", 2],
-"method": &"spawnar"
-}, {
-"args": ["brasil", 2],
+"args": ["brasil", 1],
 "method": &"spawnar"
 }, {
 "args": ["rede", 3],

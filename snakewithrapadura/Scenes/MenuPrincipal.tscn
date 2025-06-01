@@ -1,12 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://d4m6c6gyid5nw"]
+[gd_scene load_steps=18 format=3 uid="uid://d4m6c6gyid5nw"]
 
 [ext_resource type="Script" uid="uid://chhipaahmo087" path="res://Scenes/JogarButton.gd" id="1_3k1ur"]
-[ext_resource type="Script" uid="uid://dqkki2e70oa0l" path="res://Scenes/menu_principal.gd" id="1_hbekh"]
+[ext_resource type="Script" path="res://Scenes/menu_principal.gd" id="1_hbekh"]
 [ext_resource type="FontFile" uid="uid://dfmt7r1gft536" path="res://assets/fonts/Daydream.ttf" id="1_wvohi"]
 [ext_resource type="FontFile" uid="uid://dx3fghii5hyix" path="res://assets/fonts/upheavtt.ttf" id="2_l10t8"]
 [ext_resource type="Texture2D" uid="uid://dxsg20ph5mkvt" path="res://assets/ui/CobraHistory.png" id="4_8kh3b"]
 [ext_resource type="Texture2D" uid="uid://dd4wwbujchgy0" path="res://assets/ui/Banderola.png" id="5_vtrnu"]
 [ext_resource type="Texture2D" uid="uid://2ouq4d4ngm0k" path="res://assets/SushiComRapadura.png" id="6_hbekh"]
+[ext_resource type="AudioStream" uid="uid://dkn2otmlrkijp" path="res://sound/RefraoInicio.mp3" id="8_pkrck"]
 
 [sub_resource type="Gradient" id="Gradient_vtrnu"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -181,5 +182,10 @@ libraries = {
 [node name="SushiComRapadura" type="Sprite2D" parent="."]
 position = Vector2(119, 435)
 texture = ExtResource("6_hbekh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pkrck")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Button" to="Button" method="startGame"]
