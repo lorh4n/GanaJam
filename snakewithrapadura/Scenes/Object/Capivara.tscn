@@ -4,14 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://dy5yoyp4westo" path="res://assets/Objects/capivara.png" id="2_cwvii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_giu01"]
-size = Vector2(147, 82)
+size = Vector2(136.726, 42.1014)
 
 [node name="Capivara" type="StaticBody2D" groups=["Objeto"]]
 script = ExtResource("1_17q3o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
 texture = ExtResource("2_cwvii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -2)
+position = Vector2(7, 8)
+scale = Vector2(0.885714, 1.07519)
 shape = SubResource("RectangleShape2D_giu01")

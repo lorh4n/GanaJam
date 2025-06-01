@@ -85,10 +85,118 @@ tracks/0/path = NodePath("SubViewportContainer/SubViewport/Spawner")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(60),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(4.1, 8, 12.0333, 16.1, 20.2, 25.6, 30.0667, 33.8333, 36.8, 44.4, 48.1667, 52.1027, 55.7, 58.1022, 63.5667, 70.1333, 81.0998, 84.0667, 88.1234, 91.9, 95.7333, 98.012, 100.133, 104.229, 109.015, 112.467, 116.037, 120.94, 124.733, 128.933, 133.433, 136.8, 141.367, 144.263, 147.869, 150.133, 153.367),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
-"args": ["batera", 1],
+"args": ["gamuto", 1],
+"method": &"spawnar"
+}, {
+"args": ["gamuto", 2],
+"method": &"spawnar"
+}, {
+"args": ["gamuto", 2],
+"method": &"spawnar"
+}, {
+"args": ["capivara", 2],
+"method": &"spawnar"
+}, {
+"args": ["mistura", 2],
+"method": &"spawnar"
+}, {
+"args": ["brasil", 2],
+"method": &"spawnar"
+}, {
+"args": ["brasil", 2],
+"method": &"spawnar"
+}, {
+"args": ["brasil", 2],
+"method": &"spawnar"
+}, {
+"args": ["brasil", 2],
+"method": &"spawnar"
+}, {
+"args": ["brasil", 2],
+"method": &"spawnar"
+}, {
+"args": ["rede", 3],
+"method": &"spawnar"
+}, {
+"args": ["sakura", 1],
+"method": &"spawnar"
+}, {
+"args": ["saque", 1],
+"method": &"spawnar"
+}, {
+"args": ["saque", 2],
+"method": &"spawnar"
+}, {
+"args": ["capivara", 1],
+"method": &"spawnar"
+}, {
+"args": ["mistura", 3],
+"method": &"spawnar"
+}, {
+"args": ["sakura", 3],
+"method": &"spawnar"
+}, {
+"args": ["Pao", 2],
+"method": &"spawnar"
+}, {
+"args": ["rede", 1],
+"method": &"spawnar"
+}, {
+"args": ["shibainu", 2],
+"method": &"spawnar"
+}, {
+"args": ["saque", 2],
+"method": &"spawnar"
+}, {
+"args": ["brasil", 1],
+"method": &"spawnar"
+}, {
+"args": ["brasil", 2],
+"method": &"spawnar"
+}, {
+"args": ["gamuto", 3],
+"method": &"spawnar"
+}, {
+"args": ["criatura", 2],
+"method": &"spawnar"
+}, {
+"args": ["mistura", 1],
+"method": &"spawnar"
+}, {
+"args": ["brasil", 2],
+"method": &"spawnar"
+}, {
+"args": ["guitarra", 3],
+"method": &"spawnar"
+}, {
+"args": ["guitarra", 1],
+"method": &"spawnar"
+}, {
+"args": ["guitarra", 2],
+"method": &"spawnar"
+}, {
+"args": ["guitarra", 3],
+"method": &"spawnar"
+}, {
+"args": ["guitarra", 1],
+"method": &"spawnar"
+}, {
+"args": ["violao", 2],
+"method": &"spawnar"
+}, {
+"args": ["guitarra", 3],
+"method": &"spawnar"
+}, {
+"args": ["batera", 3],
+"method": &"spawnar"
+}, {
+"args": ["zabumba", 1],
+"method": &"spawnar"
+}, {
+"args": ["brasil", 2],
 "method": &"spawnar"
 }]
 }
