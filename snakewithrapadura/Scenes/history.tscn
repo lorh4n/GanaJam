@@ -34,10 +34,10 @@ tracks/1/path = NodePath("Banderola:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.713333, 1.16667, 1.53333),
-"transitions": PackedFloat32Array(0.366022, 0.366022, 0.366022),
+"times": PackedFloat32Array(0.71, 0.713333, 1.16667, 1.53333),
+"transitions": PackedFloat32Array(1, 0.366022, 0.366022, 0.366022),
 "update": 0,
-"values": [Vector2(589, -148), Vector2(592, 255), Vector2(585, 211)]
+"values": [Vector2(478, -140), Vector2(500, -148), Vector2(500, 255), Vector2(500, 170)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -87,6 +87,36 @@ tracks/5/keys = {
 "update": 1,
 "values": [false]
 }
+
+[sub_resource type="Animation" id="Animation_gnqan"]
+resource_name = "HistorySlide2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ThinkSushi:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ThinkSushi:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ogxjo"]
+resource_name = "Map"
 
 [sub_resource type="Animation" id="Animation_pyrfq"]
 length = 0.001
@@ -199,33 +229,6 @@ tracks/8/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_gnqan"]
-resource_name = "HistorySlide2"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ThinkSushi:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.97),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ThinkSushi:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="Animation" id="Animation_uyvxs"]
 resource_name = "Slide3"
 length = 2.0
@@ -278,9 +281,6 @@ tracks/3/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_ogxjo"]
-resource_name = "Map"
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i534w"]
 _data = {
 &"History": SubResource("Animation_d85y4"),
@@ -318,13 +318,13 @@ grow_vertical = 2
 script = ExtResource("1_pyrfq")
 
 [node name="HistoryBg" type="Sprite2D" parent="."]
-position = Vector2(574.25, 331)
-scale = Vector2(0.385167, 0.315)
+position = Vector2(500.885, 291)
+scale = Vector2(0.309356, 0.253)
 texture = ExtResource("2_oig27")
 
 [node name="HistoryPaper" type="Sprite2D" parent="."]
-position = Vector2(592, 328)
-scale = Vector2(1.73889, 1.73889)
+position = Vector2(502, 268)
+scale = Vector2(1.43889, 1.43889)
 texture = ExtResource("3_0uxmr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -335,21 +335,21 @@ libraries = {
 [node name="Banderola" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(589, -148)
-scale = Vector2(1.56977, 1.56977)
+scale = Vector2(1.29378, 1.24443)
 texture = ExtResource("4_4ipw6")
 
 [node name="CobraHistory" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(962, 458)
+position = Vector2(797, 371)
 scale = Vector2(1.14535, 1.14535)
 texture = ExtResource("5_enxr6")
 
 [node name="ButtonProximo" type="Button" parent="."]
 layout_mode = 0
-offset_left = 883.0
-offset_top = 531.0
-offset_right = 1088.0
-offset_bottom = 604.0
+offset_left = 711.0
+offset_top = 447.0
+offset_right = 888.0
+offset_bottom = 497.0
 theme_override_fonts/font = SubResource("FontVariation_i534w")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_d85y4")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_i534w")
@@ -364,12 +364,12 @@ script = ExtResource("9_gnqan")
 [node name="ThinkSushi" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0)
-position = Vector2(730, 378)
+position = Vector2(540, 308)
 scale = Vector2(1.14968, 1.14968)
 texture = ExtResource("10_enxr6")
 
 [node name="MaspThink" type="Sprite2D" parent="."]
-position = Vector2(666, 330)
+position = Vector2(510, 291)
 scale = Vector2(1.57474, 1.66667)
 texture = ExtResource("11_gnqan")
 

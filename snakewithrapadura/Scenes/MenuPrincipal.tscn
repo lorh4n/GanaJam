@@ -1,9 +1,72 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4m6c6gyid5nw"]
+[gd_scene load_steps=17 format=3 uid="uid://d4m6c6gyid5nw"]
 
 [ext_resource type="Script" uid="uid://chhipaahmo087" path="res://Scenes/JogarButton.gd" id="1_3k1ur"]
+[ext_resource type="Script" uid="uid://dqkki2e70oa0l" path="res://Scenes/menu_principal.gd" id="1_hbekh"]
+[ext_resource type="FontFile" uid="uid://dfmt7r1gft536" path="res://assets/fonts/Daydream.ttf" id="1_wvohi"]
+[ext_resource type="FontFile" uid="uid://dx3fghii5hyix" path="res://assets/fonts/upheavtt.ttf" id="2_l10t8"]
+[ext_resource type="Texture2D" uid="uid://dxsg20ph5mkvt" path="res://assets/ui/CobraHistory.png" id="4_8kh3b"]
+[ext_resource type="Texture2D" uid="uid://dd4wwbujchgy0" path="res://assets/ui/Banderola.png" id="5_vtrnu"]
+[ext_resource type="Texture2D" uid="uid://2ouq4d4ngm0k" path="res://assets/SushiComRapadura.png" id="6_hbekh"]
+
+[sub_resource type="Gradient" id="Gradient_vtrnu"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hbekh"]
+gradient = SubResource("Gradient_vtrnu")
+fill_from = Vector2(0.201835, 0.059633)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bt1tr"]
+font = ExtResource("1_wvohi")
+font_size = 50
+font_color = Color(0.784314, 0.486275, 0.172549, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_qp0bb"]
-font_size = 50
+font = ExtResource("1_wvohi")
+font_size = 20
+font_color = Color(0.458824, 0.235294, 0, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_pkrck"]
+base_font = ExtResource("2_l10t8")
+
+[sub_resource type="FontVariation" id="FontVariation_qovuk"]
+base_font = ExtResource("2_l10t8")
+
+[sub_resource type="Animation" id="Animation_pkrck"]
+resource_name = "Menu"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SushiComRapadura:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(114, 430), Vector2(111, 421), Vector2(114, 430)]
+}
+
+[sub_resource type="Animation" id="Animation_qovuk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SushiComRapadura:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(119, 435)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3v4os"]
+_data = {
+&"Menu": SubResource("Animation_pkrck"),
+&"RESET": SubResource("Animation_qovuk")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,34 +75,57 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hbekh")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(469, 252.5)
+scale = Vector2(15.6562, 8.89062)
+texture = SubResource("GradientTexture2D_hbekh")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.275
+anchor_top = 0.222
+anchor_right = 0.803
+anchor_bottom = 0.344
+offset_left = -92.0
+offset_top = 27.12
+offset_right = -4.30402
+offset_bottom = 98.24
+text = "RAPADURA
+"
+label_settings = SubResource("LabelSettings_bt1tr")
+horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
 anchor_left = 0.275
-anchor_top = 0.238
-anchor_right = 0.733
+anchor_top = 0.222
+anchor_right = 0.803
 anchor_bottom = 0.344
-offset_left = 8.19998
-offset_top = -0.223999
-offset_right = -0.416016
-offset_bottom = 0.0879974
-text = "SuSHII com Rapadura"
+offset_left = -50.0
+offset_top = -11.88
+offset_right = -313.88
+offset_bottom = -40.76
+text = "Sushi com"
 label_settings = SubResource("LabelSettings_qp0bb")
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.447
-anchor_top = 0.476
-anchor_right = 0.553
+anchor_left = 0.405
+anchor_top = 0.465
+anchor_right = 0.584
 anchor_bottom = 0.524
-offset_left = -32.944
-offset_top = 0.552002
-offset_right = -0.0560303
-offset_bottom = 0.447968
+offset_left = -22.8
+offset_top = -12.1
+offset_right = -5.64008
+offset_bottom = -7.95999
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_pkrck")
 text = "JOGAR"
 script = ExtResource("1_3k1ur")
 
@@ -49,10 +135,11 @@ anchors_preset = -1
 anchor_top = 1.29
 anchor_right = 1.0
 anchor_bottom = 2.274
-offset_top = 0.00999832
-offset_bottom = 0.505997
+offset_top = 0.560013
+offset_bottom = 1.05602
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_qovuk")
 text = "DIFICULDADE"
 
 [node name="Button2" type="Button" parent="Button"]
@@ -61,10 +148,38 @@ anchors_preset = -1
 anchor_top = 1.29
 anchor_right = 1.0
 anchor_bottom = 2.274
-offset_top = 40.51
-offset_bottom = 41.006
+offset_left = -1.0
+offset_top = 49.56
+offset_right = -1.0
+offset_bottom = 50.056
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_qovuk")
 text = "SAIR"
+
+[node name="CobraHistory" type="Sprite2D" parent="."]
+position = Vector2(833, 404.453)
+scale = Vector2(1.54651, 1.54651)
+texture = ExtResource("4_8kh3b")
+
+[node name="Banderola3" type="Node2D" parent="."]
+position = Vector2(0, 20.275)
+
+[node name="Banderola" type="Sprite2D" parent="Banderola3"]
+position = Vector2(196, 22.725)
+texture = ExtResource("5_vtrnu")
+
+[node name="Banderola2" type="Sprite2D" parent="Banderola3"]
+position = Vector2(716, 24.725)
+texture = ExtResource("5_vtrnu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3v4os")
+}
+
+[node name="SushiComRapadura" type="Sprite2D" parent="."]
+position = Vector2(119, 435)
+texture = ExtResource("6_hbekh")
 
 [connection signal="pressed" from="Button" to="Button" method="startGame"]
