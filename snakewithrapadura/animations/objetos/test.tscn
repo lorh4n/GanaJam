@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b8ph4yvbdhph0"]
 
 [ext_resource type="Script" uid="uid://c25t3mc3so0ru" path="res://Scripts/spawner.gd" id="1_7sb34"]
-[ext_resource type="Script" uid="uid://btt5kwtfd74x" path="res://animations/objetos/test.gd" id="1_fsqg6"]
+[ext_resource type="Script" path="res://animations/objetos/test.gd" id="1_fsqg6"]
 
 [sub_resource type="Animation" id="Animation_7sb34"]
 resource_name = "new_animation"

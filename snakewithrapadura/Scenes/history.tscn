@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://l2ihdh6n2hkr"]
+[gd_scene load_steps=16 format=3 uid="uid://l2ihdh6n2hkr"]
 
-[ext_resource type="Script" uid="uid://dw3g1n7t674hb" path="res://Scenes/history.gd" id="1_pyrfq"]
+[ext_resource type="Script" path="res://Scenes/history.gd" id="1_pyrfq"]
 [ext_resource type="Texture2D" uid="uid://cjdl6os2mvdbv" path="res://assets/Testes/HistoryBg.jpg" id="2_oig27"]
 [ext_resource type="Texture2D" uid="uid://c5dco72eoiesb" path="res://assets/Testes/HistoryPaper.png" id="3_0uxmr"]
+[ext_resource type="FontFile" uid="uid://dfmt7r1gft536" path="res://assets/fonts/Daydream.ttf" id="4_0uxmr"]
+[ext_resource type="Texture2D" uid="uid://b70l346upde5p" path="res://assets/ui/ButtonNormal.png" id="5_d85y4"]
+[ext_resource type="Texture2D" uid="uid://dnhdnbfwo0hbk" path="res://assets/ui/ButtonPress.png" id="5_i534w"]
 
 [sub_resource type="Animation" id="Animation_d85y4"]
 resource_name = "History"
@@ -13,16 +16,50 @@ tracks/0/path = NodePath("HistoryPaper:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.933333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": []
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pyrfq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HistoryPaper:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i534w"]
 _data = {
-&"History": SubResource("Animation_d85y4")
+&"History": SubResource("Animation_d85y4"),
+&"RESET": SubResource("Animation_pyrfq")
 }
+
+[sub_resource type="FontVariation" id="FontVariation_i534w"]
+base_font = ExtResource("4_0uxmr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d85y4"]
+texture = ExtResource("5_i534w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i534w"]
+texture = ExtResource("5_i534w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_enxr6"]
+texture = ExtResource("5_i534w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ipw6"]
+texture = ExtResource("5_i534w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ofyi"]
+texture = ExtResource("5_d85y4")
 
 [node name="History" type="Control"]
 layout_mode = 3
@@ -47,3 +84,18 @@ texture = ExtResource("3_0uxmr")
 libraries = {
 &"": SubResource("AnimationLibrary_i534w")
 }
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 883.0
+offset_top = 531.0
+offset_right = 1088.0
+offset_bottom = 604.0
+theme_override_fonts/font = SubResource("FontVariation_i534w")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_d85y4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_i534w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_enxr6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4ipw6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ofyi")
+text = "PROXIMO
+"
