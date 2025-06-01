@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ufr43rik8v2o"]
+
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/Object/objeto.gd" id="1_26t7y"]
+[ext_resource type="Texture2D" uid="uid://ixtdmmvgy5rd" path="res://animations/god/camisa_of_god.png" id="2_u87aj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtaap"]
+size = Vector2(70, 45)
+
+[node name="Brasil" type="StaticBody2D" groups=["Objeto"]]
+script = ExtResource("1_26t7y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -17)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_u87aj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 23.5)
+shape = SubResource("RectangleShape2D_jtaap")
