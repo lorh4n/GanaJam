@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmfaxf7najo1i"]
 
-[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_h7qqg"]
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/Object/objeto.gd" id="1_h7qqg"]
 [ext_resource type="Texture2D" uid="uid://cyymys23huw87" path="res://assets/Objects/Zabumba.png" id="2_id5iv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2wse"]

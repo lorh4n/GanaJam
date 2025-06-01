@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bu1tfqagoehjb"]
 
-[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_ncxn1"]
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/Object/objeto.gd" id="1_ncxn1"]
 [ext_resource type="Texture2D" uid="uid://boh515rdpushx" path="res://assets/Objects/Shibainu.png" id="2_ts44f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2omk"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvgscb4pp5xly"]
 
-[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_17q3o"]
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/Object/objeto.gd" id="1_17q3o"]
 [ext_resource type="Texture2D" uid="uid://dy5yoyp4westo" path="res://assets/Objects/capivara.png" id="2_cwvii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_giu01"]

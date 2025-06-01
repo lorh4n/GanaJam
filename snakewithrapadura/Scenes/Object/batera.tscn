@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfyy48eyd074m"]
 
-[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_agmky"]
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/Object/objeto.gd" id="1_agmky"]
 [ext_resource type="Texture2D" uid="uid://d26kx87k3c33w" path="res://assets/Objects/Bateria.png" id="2_nc76i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ytmda"]

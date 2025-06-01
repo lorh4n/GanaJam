@@ -1,7 +1,6 @@
-
 [gd_scene load_steps=14 format=3 uid="uid://csbx5pbdwm3vu"]
 
-[ext_resource type="Script" uid="uid://ddu4tswvxe5fe" path="res://Scenes/player.gd" id="1_5x4x5"]
+[ext_resource type="Script" uid="uid://ddu4tswvxe5fe" path="res://Scenes/Player/player.gd" id="1_5x4x5"]
 [ext_resource type="Texture2D" uid="uid://cbu75ryxxij8c" path="res://assets/CobraAndando.png" id="1_fgljv"]
 [ext_resource type="PackedScene" uid="uid://dq3etdnral8sb" path="res://Scenes/background_controller.tscn" id="3_24vhe"]
 [ext_resource type="PackedScene" uid="uid://b4a2kummsd4x8" path="res://Scenes/game_controller.tscn" id="4_rqm4r"]

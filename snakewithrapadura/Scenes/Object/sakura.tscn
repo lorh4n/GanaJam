@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dg85l4xj8qmam"]
 
-[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_l68vs"]
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/Object/objeto.gd" id="1_l68vs"]
 [ext_resource type="Texture2D" uid="uid://dq4hqf0kbbgoi" path="res://assets/Objects/Sakura.png" id="2_rpnpw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ob5iq"]

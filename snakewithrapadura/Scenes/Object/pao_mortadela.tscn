@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dl5i15msltqp"]
 
-[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_lohk5"]
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/Object/objeto.gd" id="1_lohk5"]
 [ext_resource type="Texture2D" uid="uid://blfep7aus7tev" path="res://assets/Objects/PãoComMortadela.png" id="2_q1yjo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ru7xg"]
