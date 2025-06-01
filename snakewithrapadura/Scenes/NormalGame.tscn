@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://di2ovnknppthq"]
+[gd_scene load_steps=4 format=3 uid="uid://csbx5pbdwm3vu"]
 
-[ext_resource type="PackedScene" uid="uid://c35ndtonhbi62" path="res://Scenes/player.tscn" id="1_sm7en"]
+[ext_resource type="PackedScene" uid="uid://c35ndtonhbi62" path="res://Scenes/Player/player.tscn" id="1_sm7en"]
 [ext_resource type="PackedScene" uid="uid://b4a2kummsd4x8" path="res://Scenes/game_controller.tscn" id="2_sm7en"]
+[ext_resource type="PackedScene" uid="uid://dq3etdnral8sb" path="res://Scenes/background_controller.tscn" id="3_5x4x5"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_sm7en")]
-position = Vector2(78, 49)
+position = Vector2(109, 458)
 
 [node name="GameController" parent="." instance=ExtResource("2_sm7en")]
+
+[node name="BackgroundController" parent="." node_paths=PackedStringArray("game_controller") instance=ExtResource("3_5x4x5")]
+game_controller = NodePath("../GameController")
