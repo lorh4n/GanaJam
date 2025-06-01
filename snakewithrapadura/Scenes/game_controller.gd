@@ -2,7 +2,7 @@ extends Node
 
 var music_position=0
 var music=preload("res://sound/MusicaPrincipal.mp3")
-var inverted_music=preload("res://sound/MusicaPrincipal.mp3")
+var inverted_music=preload("res://sound/MusicaPrincipal_Invertido.mp3")
 var inverted=false
 func get_music_time():
 	return $AudioStreamPlayer.get_playback_position()
@@ -19,8 +19,20 @@ func invert_music():
 	$AudioStreamPlayer.play(inverted_music.get_length()-music_position)
 	inverted=true
 	get_parent().get_parent().material.set_shader_parameter("on",1)
+	$AnimationPlayer.stop()
+	#for i in $"../Spawner".get_children():
+		#i.queue_free()
+
+func revert_music():
+	$AudioStreamPlayer.stream=music
+	$AudioStreamPlayer.play()
+	inverted=false
 
 func _on_audio_stream_player_finished() -> void:
 	if inverted:
 		$"../Revive".queue_free()
 		get_parent().get_parent().material.set_shader_parameter("on",0)
+		#spawn snake, restart animation player
+		$"../Player".visible=true
+		$"../Player".disabled=false
+		revert_music()
