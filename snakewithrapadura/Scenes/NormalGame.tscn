@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=14 format=3 uid="uid://csbx5pbdwm3vu"]
 
 [ext_resource type="Script" uid="uid://ddu4tswvxe5fe" path="res://Scenes/player.gd" id="1_5x4x5"]
@@ -46,30 +47,17 @@ _data = {
 &"SpawnTimeline": SubResource("Animation_jujb6")
 }
 
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_24vhe"]
 size = Vector2(1196, 24.5)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" type="CharacterBody2D" parent="."]
-z_index = 10
+[node name="Player" parent="." instance=ExtResource("1_24vhe")]
 position = Vector2(585, 508.09)
-scale = Vector2(0.236523, 0.236523)
-script = ExtResource("1_5x4x5")
 
-[node name="Sprite" type="Sprite2D" parent="Player"]
-texture = ExtResource("1_fgljv")
-hframes = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_5x4x5")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
-libraries = {
-&"": SubResource("AnimationLibrary_5x4x5")
-}
-
-[node name="BackgroundController" parent="." instance=ExtResource("3_24vhe")]
+[node name="BackgroundController" parent="." node_paths=PackedStringArray("game_controller") instance=ExtResource("3_24vhe")]
+game_controller = NodePath("../GameController")
 
 [node name="GameController" parent="." instance=ExtResource("4_rqm4r")]
 script = ExtResource("5_ybk2h")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvgscb4pp5xly"]
+
+[ext_resource type="Script" uid="uid://d61cek5b5gmx" path="res://Scenes/objeto.gd" id="1_17q3o"]
+[ext_resource type="Texture2D" uid="uid://dy5yoyp4westo" path="res://assets/Objects/capivara.png" id="2_cwvii"]
+[ext_resource type="Script" uid="uid://rm31pagb0uf8" path="res://Scenes/hurt_box.gd" id="3_et6ic"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_giu01"]
+size = Vector2(147, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgio5"]
+size = Vector2(148, 82)
+
+[node name="Capivara" type="CharacterBody2D" groups=["Objeto"]]
+script = ExtResource("1_17q3o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cwvii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_giu01")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_et6ic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_wgio5")
