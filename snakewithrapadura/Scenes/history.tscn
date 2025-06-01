@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://l2ihdh6n2hkr"]
+
+[ext_resource type="Script" uid="uid://dw3g1n7t674hb" path="res://Scenes/history.gd" id="1_pyrfq"]
+[ext_resource type="Texture2D" uid="uid://cjdl6os2mvdbv" path="res://assets/Testes/HistoryBg.jpg" id="2_oig27"]
+[ext_resource type="Texture2D" uid="uid://c5dco72eoiesb" path="res://assets/Testes/HistoryPaper.png" id="3_0uxmr"]
+
+[sub_resource type="Animation" id="Animation_d85y4"]
+resource_name = "History"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HistoryPaper:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i534w"]
+_data = {
+&"History": SubResource("Animation_d85y4")
+}
+
+[node name="History" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pyrfq")
+
+[node name="HistoryBg" type="Sprite2D" parent="."]
+position = Vector2(574.25, 331)
+scale = Vector2(0.385167, 0.315)
+texture = ExtResource("2_oig27")
+
+[node name="HistoryPaper" type="Sprite2D" parent="."]
+position = Vector2(592, 328)
+scale = Vector2(1.73889, 1.73889)
+texture = ExtResource("3_0uxmr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_i534w")
+}
