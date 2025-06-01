@@ -1,7 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://yvc8r3kmw1tg"]
+[gd_scene load_steps=10 format=3 uid="uid://yvc8r3kmw1tg"]
 
 [ext_resource type="Script" uid="uid://cm0se310lqcul" path="res://animations/AnimationController.gd" id="1_smtnr"]
 [ext_resource type="Texture2D" uid="uid://dp6j5e0q5nlw3" path="res://animations/god/God_sem_camisa.png" id="1_wxfk2"]
+[ext_resource type="Texture2D" uid="uid://ixtdmmvgy5rd" path="res://animations/god/camisa_of_god.png" id="3_812go"]
+
+[sub_resource type="Animation" id="Animation_kbdaa"]
+resource_name = "God_hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GodSemCamisa:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_812go"]
 resource_name = "God_show"
@@ -32,12 +48,55 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CamisaOfGod:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(546, 727)]
+}
 
-[sub_resource type="Animation" id="Animation_kbdaa"]
-resource_name = "God_hide"
+[sub_resource type="Animation" id="Animation_a4c4d"]
+resource_name = "Camisa_show"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CamisaOfGod:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(9.84916, 9.84916),
+"update": 0,
+"values": [Vector2(546, 727), Vector2(575, 350)]
+}
+
+[sub_resource type="Animation" id="Animation_rnacl"]
+resource_name = "Camisa_hide"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CamisaOfGod:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.666667),
+"transitions": PackedFloat32Array(9.84916, 9.84916),
+"update": 0,
+"values": [Vector2(575, 350), Vector2(546, 727)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kbdaa"]
 _data = {
+&"Camisa_hide": SubResource("Animation_rnacl"),
+&"Camisa_show": SubResource("Animation_a4c4d"),
 &"God_hide": SubResource("Animation_kbdaa"),
 &"God_show": SubResource("Animation_812go"),
 &"RESET": SubResource("Animation_smtnr")
@@ -51,7 +110,12 @@ position = Vector2(571, 351)
 scale = Vector2(0.573826, 0.573825)
 texture = ExtResource("1_wxfk2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="CamisaOfGod" type="Sprite2D" parent="."]
+position = Vector2(546, 727)
+scale = Vector2(0.563928, 0.583893)
+texture = ExtResource("3_812go")
+
+[node name="AnimationGod" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_kbdaa")
 }
