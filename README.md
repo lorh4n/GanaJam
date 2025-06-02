@@ -25,16 +25,17 @@ Em sua jornada pela estrada, ela segue ao som da contagiante música *Sushi com 
 
 ## Instalação 
 
-Você pode baixar os executáveis na aba [Releases](link).
+Você pode baixar os executáveis na aba [Releases](https://github.com/lorh4n/GanaJam/releases).
 E também temos ele no [itch.io]()
 
-## Capturas de Tela
-
-![Screenshot 1](caminho/para/screenshot1.png)  
-![Screenshot 2](caminho/para/screenshot2.png)
+<!-- ## Capturas de Tela
+ -->
 
 ## Equipe
 
+* [@AnaBeatrizHidalgo](https://github.com/AnaBeatrizHidalgo)
+* [@FelipePM01](https://github.com/FelipePM01)
+* [@lorh4n](https://github.com/lorh4n)
 
 ## Créditos
 
