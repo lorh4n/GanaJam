@@ -2,15 +2,15 @@
 
 ![Banner ou Screenshot do Jogo](Logo.png)
 
-## Descrição
+## O Jogo
+
+**Sushiiii com Rapadura** é um jogo desenvolvido durante uma game jam de 48 horas. Nele, você controla uma cobrinha determinada a encontrar seu prato favorito: **sushi com rapadura**!  
+Em sua jornada pela estrada, ela segue ao som da contagiante música *Sushi com Rapadura*, enfrentando obstáculos e desafios no caminho.
 
 **Tema da Game Jam:** "Olha a cobra" (festa junina)
 **Duração da Game Jam:** 48 horas  
 **Ferramentas Utilizadas:** Godot
 **Plataforma:** 
-
-**Sushiiii com Rapadura** é um jogo desenvolvido durante uma game jam de 48 horas. Nele, você controla uma cobrinha determinada a encontrar seu prato favorito: **sushi com rapadura**!  
-Em sua jornada pela estrada, ela segue ao som da contagiante música *Sushi com Rapadura*, enfrentando obstáculos e desafios no caminho.
 
 ## Como Jogar
 
