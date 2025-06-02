@@ -23,12 +23,11 @@ Em sua jornada pela estrada, ela segue ao som da contagiante música *Sushi com 
   - [Seta Baixo]: Mover para baixo
 
 - **Objetivo:**  
-  Encontre o sushi com rapadura enquanto evita os perigos pelo caminho.
-
+   Viaje em busca do seu sushi com rapadura enquanto evita os perigos pelo caminho
 ## Instalação 
 
 Você pode baixar os executáveis na aba [Releases](https://github.com/lorh4n/GanaJam/releases).
-E também temos ele no [itch.io]()
+E também temos ele no [itch.io](https://ana-hidalgo.itch.io/sushiii-com-rapadura)
 
 <!-- ## Capturas de Tela
  -->
