@@ -8,9 +8,11 @@
 Em sua jornada pela estrada, ela segue ao som da contagiante música *Sushi com Rapadura*, enfrentando obstáculos e desafios no caminho.
 
 **Tema da Game Jam:** "Olha a cobra" (festa junina)
-**Duração da Game Jam:** 48 horas  
+
+**Duração da Game Jam:** 48 horas
+
 **Ferramentas Utilizadas:** Godot
-**Plataforma:** 
+ 
 
 ## Como Jogar
 
