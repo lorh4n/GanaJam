@@ -4,6 +4,8 @@
 
 ## O Jogo
 
+Jogo inspirado na música "Sushi com Rapadura" da banda Lisergia Tropical
+
 **Sushiiii com Rapadura** é um jogo desenvolvido durante uma game jam de 48 horas. Nele, você controla uma cobrinha determinada a encontrar seu prato favorito: **sushi com rapadura**!  
 Em sua jornada pela estrada, ela segue ao som da contagiante música *Sushi com Rapadura*, enfrentando obstáculos e desafios no caminho.
 
